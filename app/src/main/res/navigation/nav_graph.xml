@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesListFragment">
+
+    <fragment
+        android:id="@+id/notesListFragment"
+        android:name="com.example.localnotesapp.ui.fragment.NotesListFragment"
+        android:label="NotesListFragment" >
+        <action
+            android:id="@+id/action_notesListFragment_to_addEditNoteFragment"
+            app:destination="@id/addEditNoteFragment" >
+        </action>
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditNoteFragment"
+        android:name="com.example.localnotesapp.ui.fragment.AddEditNoteFragment"
+        android:label="AddEditNoteFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+</navigation>
